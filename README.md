@@ -57,7 +57,7 @@ The following steps are how I made the model, upload the model to the server and
   
   Note: we can use new words wav data to train model with soft-fft or browser-fft which is in [training](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/soft-fft). Soft-fft will create a Sequencial model, and its weight file has different name from demo version.
         
-## Step 3: Embed to website:
+## Step 3: load to website:
 
   1. Create "metadata.json" manually. "words" should contains the words except background noise and "frame" is 232. [Sample.](https://github.com/XinyueZhang831/Upload_tfjs_model_streaming/blob/main/audio%20model%20file/metadata.json)
   
