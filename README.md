@@ -100,6 +100,8 @@ The following steps are how I made the model, upload the model to the server and
   
   If model is loaded correctly and catched the target word, the background of the word should turn to green.
   
+  Note: if it keeps showing "Loading..." and Chrom Devtools shows CORS error, just open http://localhost:8080/testing2.html 
+  
   
 # Reference:
 
