@@ -55,7 +55,7 @@ The following steps are how I made the model, upload the model to the server and
   
   "my-model.json" and "my-model.weights.bin" will be downloaded after clicking "Save Model".
   
-  Note: we can use new words wav data to train model with soft-fft or browser-fft which is in [training](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/soft-fft). Soft-fft will create a Sequencial model, and it weight file has different name from demo version.
+  Note: we can use new words wav data to train model with soft-fft or browser-fft which is in [training](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/soft-fft). Soft-fft will create a Sequencial model, and its weight file has different name from demo version.
         
 ## Step 3: Embed to website:
 
