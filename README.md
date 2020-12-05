@@ -76,7 +76,7 @@ The following steps are how I made the model, upload the model to the server and
   
   Note: 
   
-  1.To embed a custom model, in Javascipt modify the .create('BROWSER_FFT') line to 
+  1. To embed a custom model, in Javascipt modify the .create('BROWSER_FFT') line to 
   
   ```
   const customSpeechRecognizer = 
