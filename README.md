@@ -61,7 +61,7 @@ The following steps are how I made the model, upload the model to the server and
 
   1. Create "metadata.json" manually. "words" should contains the words except background noise and "frame" is 232. [Sample.](https://github.com/XinyueZhang831/Upload_tfjs_model_streaming/blob/main/audio%20model%20file/metadata.json)
   
-   Note: "metadata.json" can be created automatically with browser-fft training code  which is located in [training](https://github.com/tensorflow/tfjs-       models/tree/master/speech-commands/training/browser-fft)
+   Note: "metadata.json" can be created automatically with browser-fft training code  which is located in [training](https://github.com/tensorflow/tfjs-      models/tree/master/speech-commands/training/browser-fft)
   
   2. Create a folder which contains "metadata.json", "my-model.json" and "my-model.weights.bin" into the same folder, to avoid CORS error, better to leave .html and .js file in to the same folder with the previous three files.
 
