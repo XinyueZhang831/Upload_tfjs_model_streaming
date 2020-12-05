@@ -8,7 +8,7 @@ npm install @tensorflow/tfjs
 npm install @tensorflow-models/speech-commands
 ```
 
-
+## Description:
 
 I trained my model with 25 "mute" and 25 "unmute" data on the demo page. 
 
@@ -18,57 +18,54 @@ I trained my model with 25 "mute" and 25 "unmute" data on the demo page.
 
 "testing2.html" is a simple sample code which includes javascript. I didn't seperate them into two files.
 
-Current issue: I can load my model into the page but it doesn't react to my words. could be my html is disconnect with javascrip.
+## Current issue: 
+
+I can load my model into the page but it doesn't react to my words. could be my html disconnects with javascrip.
 
 The following steps are how I made the model, upload the model to the server and test.
 
-To use my testing2.html, 
+
+## To use my testing2.html, jump to step 3 and step 4.
 
 
-## Step 1: pull the Speech command tfjs repo [https://github.com/tensorflow/tfjs-models/tree/master/speech-commands]
+## Step 1: pull the Speech command tfjs [repo](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
 
 
 ##  Step 2: train a new model with demo:
   
-  In index.js, at line 660, change 
+  1. In index.js, at line 660, change 
   
-  '''
+  ```
   await transferRecognizer.save();
-  '''
-  
+  ```
   to
-  
-  '''
+  ```
   await transferRecognizer.save('downloads://my-model');
-  '''
+  ```
   
   
+  2. Give new words and click "Enter Tranfer words".
   
-  Give new words and click "Enter Tranfer words"
+  3. Record data for each word more than 5 times.
   
-  Record data for each word more than 5 times
+  4. Choose epoch and click "Start transfer learning".
   
-  Choose epoch and click "Start transfer learning"
+  5. Click "Start" which is at the top of the demo page to test if this model works.
   
-  Click "Start" which is at the top of the demo page to test if this model works
+  6. Click "Model IO" and "Save Model".
   
-  Click "Model IO" and "Save Model"
+  "my-model.json" and "my-model.weights.bin" will be downloaded after clicking "Save Model".
   
-  "my-model.json" and "my-model.weights.bin" will be downloaded after clicking "Save Model"
-  
-  Note: we can use new words wav data to train model with soft-fft or browser-fft which is in "training" folder.
-        https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/soft-fft
+  Note: we can use new words wav data to train model with soft-fft or browser-fft which is in ["training" folder](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/soft-fft)
         Soft-fft is easier to tain in terminal. 
         
 ## Step 3: Embed to website:
 
-  "metadata.json" is created manually. "words" should contains the words except background noise and "frame" is 232. 
+  1. Create "metadata.json" manually. "words" should contains the words except background noise and "frame" is 232. [Sample.](https://github.com/XinyueZhang831/Upload_tfjs_model_streaming/blob/main/audio%20model%20file/metadata.json)
   
-  "metadata.json" can be created automatically with browser-fft training code  which is located in "training"
+    Note: "metadata.json" can be created automatically with browser-fft training code  which is located in [training](https://github.com/tensorflow/tfjs-       models/tree/master/speech-commands/training/browser-fft)
   
-  [https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/browser-fft]
-  
-  Create a folder which contains "metadata.json", "my-model.json" and "my-model.weights.bin" into the same folder, to avoid CORS error, better to leave .html and .js file in to the same folder with the previous three files.
+  2. Create a folder which contains "metadata.json", "my-model.json" and "my-model.weights.bin" into the same folder, to avoid CORS error, better to leave .html and .js file in to the same folder with the previous three files.
 
   In this folder, open terminal, use command "http-server" to uplod all files into local server. 
   
@@ -76,9 +73,12 @@ To use my testing2.html,
   xinyue@xinyuezhangs-MacBook-Pro ~ % http-server
   ```
   
-  Check if uploaded by open http://localhost:8080/my-model.json and http://localhost:8080/metadata.json in browser.
+  3. Check if uploaded by open http://localhost:8080/my-model.json and http://localhost:8080/metadata.json in browser.
     
-  If use the original code from tfjs repo, in Javascipt modify the .create('BROWSER_FFT') line to 
+  
+  Note: 
+  
+  1.To embed a custom model, in Javascipt modify the .create('BROWSER_FFT') line to 
   
   ```
   const customSpeechRecognizer = 
@@ -89,7 +89,7 @@ To use my testing2.html,
   
   This is the main step to load the custom model.
   
-  Note: npm install http-server
+  2. npm install http-server
   
   ```
   npm install --global http-server
@@ -100,6 +100,6 @@ To use my testing2.html,
 
   Open "testing2.html" and test.
   
-  If model is loaded correctly and yut catched the target word, the background of the word shoud turn to green
+  If model is loaded correctly and catched the target word, the background of the word should turn to green.
   
   
