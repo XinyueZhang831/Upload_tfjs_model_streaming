@@ -18,15 +18,13 @@ I trained my model with 25 "mute" and 25 "unmute" data on the demo page.
 "metadata.json" is created manually.
 
 "testing2.html" is a simple sample code which includes javascript. I didn't seperate them into two files.
+#### To use my testing2.html, jump to step 3 and step 4.
 
 ## Current issue: 
 
 I can load my model into the page but it doesn't react to my words. could be my html disconnects with javascrip.
 
 The following steps are how I made the model, upload the model to the server and test.
-
-
-## To use my testing2.html, jump to step 3 and step 4.
 
 
 ## Step 1: pull the Speech command tfjs [repo](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
@@ -102,4 +100,16 @@ The following steps are how I made the model, upload the model to the server and
   
   If model is loaded correctly and catched the target word, the background of the word should turn to green.
   
+  
+# Reference:
+
+Import dependency: [Tensorflow Setup](https://www.tensorflow.org/js/tutorials/setup)
+
+HTML Sample code: [Speech Recognition with TensorFlow.js](https://livecodestream.dev/post/speech-recognition-with-tensorflowjs/)
+
+TFJS Speech Command: [Speech Command Recognizer](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands)
+
+Offcial TFJS Model save and load: [Save and load models](https://www.tensorflow.org/js/guide/save_load)
+
+Simple tutorial of save model and upload to server: [Saving and Uploading a TensorFlow.js Speech model](https://handsondeeplearning.com/saving-and-uploading-a-tensorflow-js-speech-model/)
   
