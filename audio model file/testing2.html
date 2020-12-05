@@ -49,11 +49,6 @@
             //recognizer = speechCommands.create("BROWSER_FFT");  
             recognizer = speechCommands.create('BROWSER_FFT', null, 'http://localhost:8080/my-model.json', 
                               'http://localhost:8080/metadata.json')
-            // testing if the model load correctly
-            //const model = tf.sequential();
-            //model.add(tf.layers.dense({ units: 1, inputShape: [1], useBias: true }));
-
-            //tfvis.show.modelSummary({ name: 'Model Summary' }, model);
             await recognizer.ensureModelLoaded()
 
              
