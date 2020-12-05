@@ -7,7 +7,7 @@ npm install @tensorflow/tfjs
 
 npm install @tensorflow-models/speech-commands
 ```
-In my testing2.html, i didn't use NPM package, 
+In my testing2.html, I didn't use NPM package, 
 
 ## Description:
 
