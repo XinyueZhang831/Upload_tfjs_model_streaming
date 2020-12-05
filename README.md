@@ -63,7 +63,7 @@ The following steps are how I made the model, upload the model to the server and
   
    Note: "metadata.json" can be created automatically with browser-fft training code  which is located in [training](https://github.com/tensorflow/tfjs-models/tree/master/speech-commands/training/browser-fft)
   
-  2. Create a folder which contains "metadata.json", "my-model.json" and "my-model.weights.bin" into the same folder, to avoid CORS error, better to leave .html and .js file in to the same folder with the previous three files.
+  2. Create a folder which contains "metadata.json", "my-model.json" and "my-model.weights.bin", to avoid CORS error, better to leave .html and .js files in to the same folder with the previous three files.
 
   In this folder, open terminal, use command "http-server" to uplod all files into local server. 
   
