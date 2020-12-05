@@ -2,11 +2,11 @@
 
 Dependency:
 
-'''
+```
 npm install @tensorflow/tfjs
 
 npm install @tensorflow-models/speech-commands
-''
+```
 
 
 
